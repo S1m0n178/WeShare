@@ -1,0 +1,16 @@
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\query\SimplePage.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\mappers\BaseMapper.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\po\UserInfo.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\service\impl\UserInfoServiceImpl.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\query\UserInfoQuery.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\enums\ResponseCodeEnum.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\query\BaseParam.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\utils\StringTools.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\vo\ResponseVO.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\enums\DateTimePatternEnum.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\vo\PaginationResultVO.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\enums\PageSize.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\service\UserInfoService.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\utils\DateUtil.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\mappers\UserInfoMapper.java
+D:\study\WeShare\weshare-common\src\main\java\com\weshare\exception\BusinessException.java

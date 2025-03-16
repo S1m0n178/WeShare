@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="项目初始化">
+      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/ABaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AGlobalExceptionHandlerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/WeShareWebRunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/WeShareWebRunApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\apache-maven-3.9.6" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.9.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2uOEcumjjQjqHWYJTDmKpuJMsil" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.weshare [clean].executor": "Run",
+    "Maven.weshare [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.WeShareAdminRunApplication.executor": "Run",
+    "Spring Boot.WeShareWebRunApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/study/WeShare/weshare-common/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\WeShare\weshare-common\src\main\resources" />
+      <recent name="D:\study\WeShare\weshare-web\src\main\java\com\weshare\web\controller" />
+      <recent name="D:\study\WeShare\weshare-web\src\main\resources" />
+      <recent name="D:\study\WeShare\weshare-admin\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\WeShare\weshare-common\src\main" />
+      <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WeShareWebRunApplication">
+    <configuration name="WeShareAdminRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="weshare-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.weshare.admin.WeShareAdminRunApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.weshare.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeShareWebRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="weshare-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.weshare.web.WeShareWebRunApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.weshare.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WeShareWebRunApplication" />
+        <item itemvalue="Spring Boot.WeShareAdminRunApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="" />
+      <created>1742111305330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742111305330</updated>
+      <workItem from="1742111306518" duration="3441000" />
+      <workItem from="1742134346053" duration="4862000" />
+    </task>
+    <task id="LOCAL-00001" summary="项目初始化">
+      <option name="closed" value="true" />
+      <created>1742113937001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742113937001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="项目初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目初始化" />
+  </component>
+</project>
