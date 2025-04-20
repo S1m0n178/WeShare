@@ -2,6 +2,7 @@ package com.weshare.service;
 
 import java.util.List;
 
+import com.weshare.entity.dto.TokenUserInfoDto;
 import com.weshare.entity.query.UserInfoQuery;
 import com.weshare.entity.po.UserInfo;
 import com.weshare.entity.vo.PaginationResultVO;
@@ -106,5 +107,6 @@ public interface UserInfoService {
 	Integer deleteUserInfoByNickName(String nickName);
 
 	void register(String email,String nickName,String registerPassword);
+	TokenUserInfoDto login(String email, String password, String ip);
 
 }

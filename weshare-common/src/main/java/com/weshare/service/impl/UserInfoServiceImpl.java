@@ -4,11 +4,17 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+import com.weshare.component.RedisComponent;
 import com.weshare.entity.constants.Constants;
+import com.weshare.entity.dto.TokenUserInfoDto;
 import com.weshare.entity.enums.UserSexEnum;
 import com.weshare.entity.enums.UserStatusEnum;
 import com.weshare.exception.BusinessException;
+import com.weshare.utils.CopyTools;
 import org.springframework.stereotype.Service;
 
 import com.weshare.entity.enums.PageSize;
@@ -29,7 +35,8 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 	@Resource
 	private UserInfoMapper<UserInfo, UserInfoQuery> userInfoMapper;
-
+	@Resource
+	private RedisComponent redisComponent;
 	/**
 	 * 根据条件查询列表
 	 */
@@ -207,5 +214,26 @@ public class UserInfoServiceImpl implements UserInfoService {
 		userInfo.setTotalCoinCount(10);
 			this.userInfoMapper.insert(userInfo);
 
+	}
+
+	@Override
+	public TokenUserInfoDto login(String email, String password, String ip){
+		UserInfo userInfo = this.userInfoMapper.selectByEmail(email);
+		if(null ==userInfo|| !userInfo.getPassword().equals(password)){
+			throw new BusinessException("账号或者密码错误");
+		}
+		if(UserStatusEnum.DISABLE.getStatus().equals(userInfo.getStatus())){
+			throw new BusinessException("账号已禁用");
+		}
+		UserInfo updateInfo = new UserInfo();
+		updateInfo.setLastLoginTime(new Date());
+		updateInfo.setLastLoginIp(ip);
+		this.userInfoMapper.updateByUserId(updateInfo,userInfo.getUserId());
+
+		TokenUserInfoDto tokenUserInfoDto = CopyTools.copy(userInfo,TokenUserInfoDto.class);
+		redisComponent.saveTokenInfo(tokenUserInfoDto);
+
+
+		return tokenUserInfoDto;
 	}
 }

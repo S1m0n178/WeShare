@@ -1,7 +1,18 @@
 package com.weshare.web.controller;
+import com.weshare.component.RedisComponent;
+import com.weshare.entity.constants.Constants;
+import com.weshare.entity.dto.TokenUserInfoDto;
 import com.weshare.entity.enums.ResponseCodeEnum;
 import com.weshare.entity.vo.ResponseVO;
 import com.weshare.exception.BusinessException;
+import com.weshare.redis.RedisUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
 public class ABaseController {
@@ -9,6 +20,9 @@ public class ABaseController {
     protected static final String STATUC_SUCCESS = "success";
 
     protected static final String STATUC_ERROR = "error";
+
+    @Resource
+    private RedisComponent redisComponent;
 
     protected <T> ResponseVO getSuccessResponseVO(T t) {
         ResponseVO<T> responseVO = new ResponseVO<>();
@@ -40,4 +54,66 @@ public class ABaseController {
         vo.setData(t);
         return vo;
     }
+
+    protected String getIpAddr() {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String ip = request.getHeader("x-forwarded-for");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            // 多次反向代理后会有多个ip值，第一个ip才是真实ip
+            if (ip.indexOf(",") != -1) {
+                ip = ip.split(",")[0];
+            }
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_CLIENT_IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("X-Real-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getRemoteAddr();
+        }
+        return ip;
+    }
+
+    protected void saveToken2Cookie(HttpServletResponse response, String token){
+        Cookie cookie = new Cookie(Constants.TOKEN_WEB,token);
+        cookie.setMaxAge(Constants.TIME_SECONDS_WEEK);
+        cookie.setPath("/");
+        response.addCookie(cookie);
+    }
+
+    protected TokenUserInfoDto getTokenUserInfoDto(){
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String token=request.getHeader(Constants.TOKEN_WEB);
+        return (TokenUserInfoDto)redisComponent.getTokenInfo(token);
+    }
+    protected void cleanCookie(HttpServletResponse response){
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+
+        Cookie[] cookies = request.getCookies();
+        if(cookies==null){
+            return;
+        }
+        String token = null;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals(Constants.TOKEN_WEB)) {
+                redisComponent.cleanToken(cookie.getValue());
+                cookie.setMaxAge(0);
+                cookie.setPath("/");
+                response.addCookie(cookie);
+                break;
+            }
+        }
+    }
+
 }
