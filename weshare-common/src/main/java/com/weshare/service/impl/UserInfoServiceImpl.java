@@ -1,9 +1,14 @@
 package com.weshare.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.weshare.entity.constants.Constants;
+import com.weshare.entity.enums.UserSexEnum;
+import com.weshare.entity.enums.UserStatusEnum;
+import com.weshare.exception.BusinessException;
 import org.springframework.stereotype.Service;
 
 import com.weshare.entity.enums.PageSize;
@@ -174,5 +179,33 @@ public class UserInfoServiceImpl implements UserInfoService {
 	@Override
 	public Integer deleteUserInfoByNickName(String nickName) {
 		return this.userInfoMapper.deleteByNickName(nickName);
+	}
+
+	@Override
+	public void register(String email,String nickName,String registerPassword){
+		UserInfo userInfo = this.userInfoMapper.selectByEmail(email);
+		if(userInfo!=null){
+			throw new BusinessException("邮箱账号已经存在");
+		}
+		UserInfo nickNameUser = this.userInfoMapper.selectByNickName(nickName);
+		if(nickNameUser!=null){
+			throw new BusinessException("昵称已经存在");
+		}
+
+			userInfo = new UserInfo();
+			String userId = StringTools.getRandomNumber(Constants.LENGTH_10);
+			userInfo.setUserId(userId);
+			userInfo.setEmail(email);
+			userInfo.setNickName(nickName);
+			userInfo.setPassword(StringTools.encodeByMd5(registerPassword));
+			userInfo.setJoinTime(new Date());
+			userInfo.setStatus(UserStatusEnum.ENABLE.getStatus());
+			userInfo.setSex(UserSexEnum.SECURITY.getType());
+			userInfo.setTheme(Constants.ONE);
+			//TODO初始化用户的硬币
+		userInfo.setCurrentCoinCount(10);
+		userInfo.setTotalCoinCount(10);
+			this.userInfoMapper.insert(userInfo);
+
 	}
 }

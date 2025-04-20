@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="项目初始化">
-      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/ABaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AGlobalExceptionHandlerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/WeShareWebRunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/WeShareWebRunApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="账号表增删改查实现">
+      <change afterPath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/UserSexEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/UserStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/redis/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/redis/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/utils/StringTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/utils/StringTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AGlobalExceptionHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AGlobalExceptionHandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/UserInfoController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +46,12 @@
         <option name="userSettingsFile" value="D:\apache-maven-3.9.6\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="corretto-1.8" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -50,16 +67,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Maven.weshare [clean].executor": "Run",
+    "Maven.weshare [compile].executor": "Run",
     "Maven.weshare [install].executor": "Run",
+    "Maven.weshare [package].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.WeShareAdminRunApplication.executor": "Run",
     "Spring Boot.WeShareWebRunApplication.executor": "Run",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/study/WeShare/weshare-common/src/main/resources",
     "node.js.detected.package.eslint": "true",
@@ -67,10 +88,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "库",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -132,7 +153,16 @@
       <option name="presentableId" value="Default" />
       <updated>1742111305330</updated>
       <workItem from="1742111306518" duration="3441000" />
-      <workItem from="1742134346053" duration="4862000" />
+      <workItem from="1742134346053" duration="5631000" />
+      <workItem from="1742234482099" duration="1857000" />
+      <workItem from="1742313254838" duration="1012000" />
+      <workItem from="1742378639626" duration="612000" />
+      <workItem from="1742633858808" duration="892000" />
+      <workItem from="1742674454224" duration="2129000" />
+      <workItem from="1742998491242" duration="662000" />
+      <workItem from="1744489610378" duration="1206000" />
+      <workItem from="1744963251445" duration="1836000" />
+      <workItem from="1745002596355" duration="13538000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -142,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742113937001</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="账号表增删改查实现">
+      <option name="closed" value="true" />
+      <created>1742141678517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742141678517</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +188,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="项目初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目初始化" />
+    <MESSAGE value="账号表增删改查实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="账号表增删改查实现" />
   </component>
 </project>

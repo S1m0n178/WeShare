@@ -105,4 +105,6 @@ public interface UserInfoService {
 	 */
 	Integer deleteUserInfoByNickName(String nickName);
 
+	void register(String email,String nickName,String registerPassword);
+
 }

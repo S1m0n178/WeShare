@@ -14,6 +14,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolationException;
 
 @RestControllerAdvice
 public class AGlobalExceptionHandlerController extends ABaseController {
@@ -44,6 +45,11 @@ public class AGlobalExceptionHandlerController extends ABaseController {
             //主键冲突
             ajaxResponse.setCode(ResponseCodeEnum.CODE_601.getCode());
             ajaxResponse.setInfo(ResponseCodeEnum.CODE_601.getMsg());
+            ajaxResponse.setStatus(STATUC_ERROR);
+        } else if (e instanceof ConstraintViolationException|| e instanceof BindException) {
+            ConstraintViolationException ce =(ConstraintViolationException) e;
+            ajaxResponse.setCode(ResponseCodeEnum.CODE_600.getCode());
+            ajaxResponse.setInfo(ResponseCodeEnum.CODE_600.getMsg());
             ajaxResponse.setStatus(STATUC_ERROR);
         } else {
             ajaxResponse.setCode(ResponseCodeEnum.CODE_500.getCode());
