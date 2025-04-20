@@ -1,11 +1,10 @@
-package com.weshare.web.controller;
+package com.weshare.admin.controller;
 import com.weshare.component.RedisComponent;
 import com.weshare.entity.constants.Constants;
 import com.weshare.entity.dto.TokenUserInfoDto;
 import com.weshare.entity.enums.ResponseCodeEnum;
 import com.weshare.entity.vo.ResponseVO;
 import com.weshare.exception.BusinessException;
-import com.weshare.redis.RedisUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -86,17 +85,12 @@ public class ABaseController {
     }
 
     protected void saveToken2Cookie(HttpServletResponse response, String token){
-        Cookie cookie = new Cookie(Constants.TOKEN_WEB,token);
-        cookie.setMaxAge(Constants.TIME_SECONDS_WEEK);
+        Cookie cookie = new Cookie(Constants.TOKEN_ADMIN,token);
+        cookie.setMaxAge(Constants.TIME_SECONDS_DAY);
         cookie.setPath("/");
         response.addCookie(cookie);
     }
 
-    protected TokenUserInfoDto getTokenUserInfoDto(){
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        String token=request.getHeader(Constants.TOKEN_WEB);
-        return redisComponent.getTokenInfo(token);
-    }
     protected void cleanCookie(HttpServletResponse response){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 
@@ -106,7 +100,7 @@ public class ABaseController {
         }
         String token = null;
         for (Cookie cookie : cookies) {
-            if (cookie.getName().equals(Constants.TOKEN_WEB)) {
+            if (cookie.getName().equals(Constants.TOKEN_ADMIN)) {
                 redisComponent.cleanToken(cookie.getValue());
                 cookie.setMaxAge(0);
                 cookie.setPath("/");

@@ -28,11 +28,20 @@ public class RedisComponent {
         tokenUserInfoDto.setToken(token);
         redisUtils.setex(Constants.REDIS_KEY_TOKEN_WEB+token,tokenUserInfoDto,Constants.REDIS_KEY_EXPIRES_ONE_WEEK);
     }
+    public String saveTokenInfo4Admin(String account){
+       String token =UUID.randomUUID().toString();
+       redisUtils.setex(Constants.REDIS_KEY_TOKEN_ADMIN+token,account,Constants.REDIS_KEY_EXPIRES_ONE_DAY);
+       return token;
+    }
     public TokenUserInfoDto getTokenInfo(String token){
         return (TokenUserInfoDto) redisUtils.get(Constants.REDIS_KEY_TOKEN_WEB+token);
     }
     public void cleanToken(String token){
         redisUtils.delete(Constants.REDIS_KEY_TOKEN_WEB+token);
+
+    }
+    public void cleanToken4Admin(String token){
+        redisUtils.delete(Constants.REDIS_KEY_TOKEN_ADMIN+token);
 
     }
 }

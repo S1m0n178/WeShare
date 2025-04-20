@@ -40,7 +40,7 @@ mybatis:
     map-underscore-to-camel-case: true
 
 project:
-  folder: c:/webser/weshare/
+  folder: d:/study/WeShare
 log:
   root:
     level: debug
