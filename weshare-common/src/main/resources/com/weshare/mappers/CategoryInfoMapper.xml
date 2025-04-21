@@ -370,13 +370,13 @@
 	
 	<select id="selectMaxSort" resultType="java.lang.Integer">
 		select  ifnull(max(sort),0) from category_info where p_category_id =#{pCategoryId}
-	</select>\
-	
-	<update id="updateSortBatch" >
-		<foreach collection = "categoryInfoList" separator=":" item="item">
-			update category_info set sort = #{item.sort} where category_id = #{item.categoryId} and p_category_id =#{item.pCategoryId}
-		</foreach>>
+	</select>
 
+	<update id="updateSortBatch">
+		<foreach collection="categoryInfoList" item="item" separator=":">
+			update category_info set sort = #{item.sort}
+			where category_id = #{item.categoryId} and p_category_id = #{item.pCategoryId}
+		</foreach>
 	</update>
 
 </mapper>
