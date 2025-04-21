@@ -1,9 +1,8 @@
-package com.weshare.web.controller;
+package com.weshare.controller;
+
 import com.weshare.entity.enums.ResponseCodeEnum;
 import com.weshare.entity.vo.ResponseVO;
 import com.weshare.exception.BusinessException;
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;
@@ -17,7 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolationException;
 
 @RestControllerAdvice
-public class AGlobalExceptionHandlerController extends ABaseController {
+public class AGlobalExceptionHandlerController {
+    private static final String STATUC_ERROR = "error";
 
     private static final Logger logger = LoggerFactory.getLogger(AGlobalExceptionHandlerController.class);
 

@@ -4,29 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="网页端登录功能实现">
-      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/ABaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/config/AppConfig.java" afterDir="false" />
+    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="管理端登录功能实现">
+      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/interceptor/AppInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/interceptor/WebAppConfigurer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/WeShareAdminRunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/WeShareAdminRunApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-admin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/UserInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/UserInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/impl/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/impl/UserInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/StringTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/StringTools.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/weshare-common-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/WeShareWebRunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/WeShareWebRunApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/ResponseCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/ResponseCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/ResponseCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/ResponseCodeEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/ABaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/ABaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AGlobalExceptionHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/controller/AGlobalExceptionHandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/WeShareWebRunApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/WeShareWebRunApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/ABaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/ABaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/AGlobalExceptionHandlerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/AGlobalExceptionHandlerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/AGlobalExceptionHandlerController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,10 +106,11 @@
       <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.weshare.controller" />
       <recent name="com.weshare.admin.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WeShareAdminRunApplication">
+  <component name="RunManager" selected="Spring Boot.WeShareWebRunApplication">
     <configuration name="WeShareAdminRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="weshare-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weshare.admin.WeShareAdminRunApplication" />
@@ -146,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.WeShareAdminRunApplication" />
         <item itemvalue="Spring Boot.WeShareWebRunApplication" />
+        <item itemvalue="Spring Boot.WeShareAdminRunApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +166,8 @@
       <workItem from="1744489610378" duration="1206000" />
       <workItem from="1744963251445" duration="1836000" />
       <workItem from="1745002596355" duration="20602000" />
-      <workItem from="1745164618369" duration="7352000" />
+      <workItem from="1745164618369" duration="8359000" />
+      <workItem from="1745235715913" duration="10952000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -207,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745148209758</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="管理端登录功能实现">
+      <option name="closed" value="true" />
+      <created>1745173579880</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745173579880</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,13 +220,18 @@
     <MESSAGE value="账号表增删改查实现" />
     <MESSAGE value="注册功能实现" />
     <MESSAGE value="网页端登录功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="网页端登录功能实现" />
+    <MESSAGE value="管理端登录功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理端登录功能实现" />
   </component>
   <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.apache.catalina.connector.Request" memberName="asyncSupported" />
-      </pinned-members>
-    </pin-to-top-manager>
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

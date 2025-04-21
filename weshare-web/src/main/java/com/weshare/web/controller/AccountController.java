@@ -95,18 +95,19 @@ public class AccountController extends ABaseController {
 		} finally {
 			redisComponent.cleanCheckCode(checkCodeKey);
 
-//			//删除多余token
-//			Cookie[] cookies = request.getCookies();
-//			String token = null;
-//			for (Cookie cookie : cookies) {
-//				if (cookie.getName().equals(Constants.TOKEN_WEB)) {
-//					token = cookie.getValue();
-//				}
-//			}
-//			if (!StringTools.isEmpty(token)) {
-//				redisComponent.cleanToken(token);
-//			}
-
+			//删除多余token
+			Cookie[] cookies = request.getCookies();
+			if(cookies!=null) {
+			String token = null;
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals(Constants.TOKEN_WEB)) {
+					token = cookie.getValue();
+				}
+			}
+			if (!StringTools.isEmpty(token)) {
+				redisComponent.cleanToken(token);
+			}
+			}
 		}
 	}
 
@@ -118,6 +119,7 @@ public class AccountController extends ABaseController {
 		}
 		if(tokenUserInfoDto.getExpireAt()-System.currentTimeMillis()<Constants.REDIS_KEY_EXPIRES_ONE_DAY){
 			redisComponent.saveTokenInfo(tokenUserInfoDto);
+			saveToken2Cookie(response, tokenUserInfoDto.getToken());
 		}
 		saveToken2Cookie(response, tokenUserInfoDto.getToken());
 		//TODO 设置粉丝数 关注数 硬币数

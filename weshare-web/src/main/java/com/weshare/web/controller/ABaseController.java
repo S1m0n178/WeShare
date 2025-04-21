@@ -91,10 +91,26 @@ public class ABaseController {
         cookie.setPath("/");
         response.addCookie(cookie);
     }
+    private String getTokenFromCookie(HttpServletRequest request){
+        Cookie[]cookies = request.getCookies();
+        if(cookies ==null ){
+            return null;
+        }
+        String token = null;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals(Constants.TOKEN_WEB)) {
+                return cookie.getValue();
+            }
+        }
+        return null;
+
+    }
 
     protected TokenUserInfoDto getTokenUserInfoDto(){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        String token=request.getHeader(Constants.TOKEN_WEB);
+        //TODO 接口测试工具发来的Header与实际前端可能不同，用request.getHeader(Constants.TOKEN_WEB)直接取不到token必须读取cookie才行
+        String token = getTokenFromCookie(request);
+//        String token=request.getHeader(Constants.TOKEN_WEB);
         return redisComponent.getTokenInfo(token);
     }
     protected void cleanCookie(HttpServletResponse response){

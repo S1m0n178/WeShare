@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.constraints.Email;
@@ -63,6 +64,7 @@ public class AccountController extends ABaseController {
 			if (!checkCode.equalsIgnoreCase(redisComponent.getCheckCode(checkCodeKey))) {
 				throw new BusinessException("图片验证码不正确");
 			}
+			String tmp = StringTools.encodeByMd5("admin123");
 			if(!account.equals(appConfig.getAdminAccount())|| !password.equals(StringTools.encodeByMd5(appConfig.getAdminPassword()))){
 				throw new BusinessException("账号密码错误");
 			}
@@ -72,17 +74,19 @@ public class AccountController extends ABaseController {
 		} finally {
 			redisComponent.cleanCheckCode(checkCodeKey);
 
-//			//删除多余token
-//			Cookie[] cookies = request.getCookies();
-//			String token = null;
-//			for (Cookie cookie : cookies) {
-//				if (cookie.getName().equals(Constants.TOKEN_WEB)) {
-//					token = cookie.getValue();
-//				}
-//			}
-//			if (!StringTools.isEmpty(token)) {
-//				redisComponent.cleanToken(token);
-//			}
+			Cookie[] cookies = request.getCookies();
+			//删除多余token
+			if(cookies!=null) {
+				String token = null;
+				for (Cookie cookie : cookies) {
+					if (cookie.getName().equals(Constants.TOKEN_ADMIN)) {
+						token = cookie.getValue();
+					}
+				}
+				if (!StringTools.isEmpty(token)) {
+					redisComponent.cleanToken4Admin(token);
+				}
+			}
 
 		}
 	}
