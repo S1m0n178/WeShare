@@ -4,21 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="管理端登录功能实现">
-      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/interceptor/AppInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/interceptor/WebAppConfigurer.java" afterDir="false" />
+    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="管理端过滤器功能实现">
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/po/CategoryInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/query/CategoryInfoQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/mappers/CategoryInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/CategoryInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/CategoryInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/resources/com/weshare/mappers/CategoryInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/ResponseCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/ResponseCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/ResponseCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/ResponseCodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/ABaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/ABaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AGlobalExceptionHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/controller/AGlobalExceptionHandlerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/WeShareWebRunApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/WeShareWebRunApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/DateTimePatternEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/DateTimePatternEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/PageSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/PageSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/po/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/po/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/BaseParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/BaseParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/SimplePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/SimplePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/UserInfoQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/UserInfoQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/vo/PaginationResultVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/vo/PaginationResultVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/vo/ResponseVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/vo/ResponseVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/exception/BusinessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/exception/BusinessException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/mappers/BaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/mappers/BaseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/mappers/UserInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/mappers/UserInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/UserInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/UserInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/impl/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/service/impl/UserInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/DateUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/DateUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/StringTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/StringTools.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/ABaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/ABaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-web/target/classes/com/weshare/web/controller/AGlobalExceptionHandlerController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +84,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.WeShareAdminRunApplication.executor": "Debug",
+    "Spring Boot.WeShareAdminRunApplication.executor": "Run",
     "Spring Boot.WeShareWebRunApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -102,15 +113,18 @@
       <recent name="D:\study\WeShare\weshare-admin\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\WeShare\weshare-common\src\main" />
-      <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare" />
+      <recent name="D:\study\WeShare\weshare-common\src\main\resources\com\weshare\mappers" />
+      <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare\service\impl" />
+      <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare\service" />
+      <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare\mappers" />
+      <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\query" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.weshare.controller" />
       <recent name="com.weshare.admin.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WeShareWebRunApplication">
+  <component name="RunManager" selected="Spring Boot.WeShareAdminRunApplication">
     <configuration name="WeShareAdminRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="weshare-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weshare.admin.WeShareAdminRunApplication" />
@@ -139,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.WeShareWebRunApplication" />
         <item itemvalue="Spring Boot.WeShareAdminRunApplication" />
+        <item itemvalue="Spring Boot.WeShareWebRunApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +181,7 @@
       <workItem from="1744963251445" duration="1836000" />
       <workItem from="1745002596355" duration="20602000" />
       <workItem from="1745164618369" duration="8359000" />
-      <workItem from="1745235715913" duration="10952000" />
+      <workItem from="1745235715913" duration="19576000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -209,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745173579880</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="管理端过滤器功能实现">
+      <option name="closed" value="true" />
+      <created>1745255751916</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745255751916</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +243,8 @@
     <MESSAGE value="注册功能实现" />
     <MESSAGE value="网页端登录功能实现" />
     <MESSAGE value="管理端登录功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理端登录功能实现" />
+    <MESSAGE value="管理端过滤器功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理端过滤器功能实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
