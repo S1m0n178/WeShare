@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="类别加载、添加保存、删除、调整次序 实现">
+    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="类别调整次序bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/CategoryInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/CategoryInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-common/src/main/resources/com/weshare/mappers/CategoryInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/resources/com/weshare/mappers/CategoryInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/BaseParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/query/BaseParam.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +160,7 @@
       <workItem from="1744963251445" duration="1836000" />
       <workItem from="1745002596355" duration="20602000" />
       <workItem from="1745164618369" duration="8359000" />
-      <workItem from="1745235715913" duration="20356000" />
+      <workItem from="1745235715913" duration="23083000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -216,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745264860732</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="类别调整次序bug修复">
+      <option name="closed" value="true" />
+      <created>1745265666638</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745265666638</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +240,8 @@
     <MESSAGE value="管理端登录功能实现" />
     <MESSAGE value="管理端过滤器功能实现" />
     <MESSAGE value="类别加载、添加保存、删除、调整次序 实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="类别加载、添加保存、删除、调整次序 实现" />
+    <MESSAGE value="类别调整次序bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="类别调整次序bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

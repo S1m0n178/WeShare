@@ -34,10 +34,10 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 	@Override
 	public List<CategoryInfo> findListByParam(CategoryInfoQuery param) {
 		List<CategoryInfo> categoryInfoList = this.categoryInfoMapper.selectList(param);
-		if (param.getConvert2Tree() != null && param.getConvert2Tree()) {
-			categoryInfoList= convertLine2Tree(categoryInfoList, Constants.ZERO);
-
-		}
+		//TODO 暂时树形转换有bug
+//		if (param.getConvert2Tree() != null && param.getConvert2Tree()) {
+//			categoryInfoList= convertLine2Tree(categoryInfoList, Constants.ZERO);
+//		}
 		return categoryInfoList;
 	}
 	private List<CategoryInfo> convertLine2Tree(List<CategoryInfo> dataList,Integer pid){
