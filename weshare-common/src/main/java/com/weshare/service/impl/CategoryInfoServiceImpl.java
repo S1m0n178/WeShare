@@ -5,8 +5,10 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.weshare.component.RedisComponent;
 import com.weshare.entity.constants.Constants;
 import com.weshare.exception.BusinessException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.weshare.entity.enums.PageSize;
@@ -27,6 +29,8 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 
 	@Resource
 	private CategoryInfoMapper<CategoryInfo, CategoryInfoQuery> categoryInfoMapper;
+	@Resource
+	private RedisComponent redisComponent;
 
 	/**
 	 * 根据条件查询列表
@@ -185,6 +189,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 			} else {
 				this.categoryInfoMapper.updateByCategoryId(bean, bean.getCategoryId());
 			}
+		save2Redis();
 
 	}
 
@@ -196,7 +201,7 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 		categoryInfoQuery.setCategoryIdOrPCategoryId(categoryId);
 		categoryInfoMapper.deleteByParam(categoryInfoQuery);
 
-		//TODO 刷新缓存
+		save2Redis();
 
 	}
 
@@ -214,7 +219,14 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 		}
 		categoryInfoMapper.updateSortBatch(categoryInfoList);
 
-		//TODO 刷新缓存
+		save2Redis();
 
+	}
+	private void save2Redis(){
+		CategoryInfoQuery query = new CategoryInfoQuery();
+		query.setOrderBy("sort asc");
+		query.setConvert2Tree(true);
+		List<CategoryInfo> categoryInfoList = findListByParam(query);
+		redisComponent.saveCategoryList(categoryInfoList);
 	}
 }
