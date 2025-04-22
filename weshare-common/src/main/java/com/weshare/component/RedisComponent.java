@@ -43,14 +43,16 @@ public class RedisComponent {
     }
     public void cleanToken(String token){
         redisUtils.delete(Constants.REDIS_KEY_TOKEN_WEB+token);
-
     }
     public void cleanToken4Admin(String token){
         redisUtils.delete(Constants.REDIS_KEY_TOKEN_ADMIN+token);
-
     }
     public void saveCategoryList(List<CategoryInfo> categoryInfoList){
         redisUtils.set(Constants.REDIS_KEY_CATEGORY_LIST,categoryInfoList);
+    }
+    public List<CategoryInfo> getCategoryList(){
+       return  (List<CategoryInfo>) redisUtils.get(Constants.REDIS_KEY_CATEGORY_LIST);
 
     }
+
 }

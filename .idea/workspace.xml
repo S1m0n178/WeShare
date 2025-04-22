@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="树形查询bug修复">
-      <change afterPath="$PROJECT_DIR$/weshare-admin/src/main/java/com/weshare/admin/controller/FileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/utils/FFmpengUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/utils/ProcessUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="92dd9979-39cb-4b9d-a8c9-53592fd39cc0" name="更改" comment="图片文件上传、读取功能实现">
+      <change afterPath="$PROJECT_DIR$/weshare-web/src/main/java/com/weshare/web/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/component/RedisComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/DateTimePatternEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/entity/enums/DateTimePatternEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/CategoryInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/CategoryInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/CategoryInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/service/impl/CategoryInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/utils/StringTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/src/main/java/com/weshare/utils/StringTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/DateTimePatternEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/entity/enums/DateTimePatternEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/StringTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/weshare-common/target/classes/com/weshare/utils/StringTools.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,11 +101,12 @@
       <recent name="D:\study\WeShare\weshare-common\src\main\java\com\weshare\entity\query" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.weshare.web.controller" />
       <recent name="com.weshare.controller" />
       <recent name="com.weshare.admin.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WeShareAdminRunApplication">
+  <component name="RunManager" selected="Spring Boot.WeShareWebRunApplication">
     <configuration name="WeShareAdminRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="weshare-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weshare.admin.WeShareAdminRunApplication" />
@@ -140,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.WeShareAdminRunApplication" />
         <item itemvalue="Spring Boot.WeShareWebRunApplication" />
+        <item itemvalue="Spring Boot.WeShareAdminRunApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +165,7 @@
       <workItem from="1745164618369" duration="8359000" />
       <workItem from="1745235715913" duration="23122000" />
       <workItem from="1745306390465" duration="1268000" />
-      <workItem from="1745307672946" duration="4100000" />
+      <workItem from="1745307672946" duration="4411000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -252,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745307573498</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="图片文件上传、读取功能实现">
+      <option name="closed" value="true" />
+      <created>1745311796953</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1745311796953</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +272,8 @@
     <MESSAGE value="类别调整次序bug修复" />
     <MESSAGE value="类别查询部分bug修复" />
     <MESSAGE value="树形查询bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="树形查询bug修复" />
+    <MESSAGE value="图片文件上传、读取功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片文件上传、读取功能实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
