@@ -35,16 +35,16 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 	public List<CategoryInfo> findListByParam(CategoryInfoQuery param) {
 		List<CategoryInfo> categoryInfoList = this.categoryInfoMapper.selectList(param);
 		//TODO 暂时树形转换有bug
-//		if (param.getConvert2Tree() != null && param.getConvert2Tree()) {
-//			categoryInfoList= convertLine2Tree(categoryInfoList, Constants.ZERO);
-//		}
+		if (param.getConvert2Tree() != null && param.getConvert2Tree()) {
+			categoryInfoList= convertLine2Tree(categoryInfoList, Constants.ZERO);
+		}
 		return categoryInfoList;
 	}
 	private List<CategoryInfo> convertLine2Tree(List<CategoryInfo> dataList,Integer pid){
 		List<CategoryInfo> children = new ArrayList<>();
 		for(CategoryInfo m :dataList){
 			if(m.getCategoryId()!=null&&m.getpCategoryId()!=null&&m.getpCategoryId().equals(pid)){
-				m.setChildren(convertLine2Tree(dataList,m.getpCategoryId()));
+				m.setChildren(convertLine2Tree(dataList,m.getCategoryId()));
 				children.add(m);
 			}
 		}
@@ -213,6 +213,8 @@ public class CategoryInfoServiceImpl implements CategoryInfoService {
 			categoryInfoList.add(categoryInfo);
 		}
 		categoryInfoMapper.updateSortBatch(categoryInfoList);
+
+		//TODO 刷新缓存
 
 	}
 }
