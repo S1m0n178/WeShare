@@ -5,7 +5,10 @@ public class Constants {
     public static final Integer ZERO=0;
 
     public static final Integer LENGTH_10 =10;
+    public static final Integer LENGTH_15 =15;
+
     public static final Integer LENGTH_30 =30;
+    public static final Integer MB_SIZE = 1024*1024;
 
     //由字母、数字、特殊字符，任意2种组成，8-18位
     public static final String REGEX_PASSWORD ="^(?![a-zA-Z]+$)(?!\\d+$)(?![^\\da-zA-Z\\s]+$).{8,18}$";
@@ -29,5 +32,7 @@ public class Constants {
     public  static final String TOKEN_ADMIN = "adminToken";
     public  static final String REDIS_KEY_CATEGORY_LIST = "category:list:";
     public static final String IMAGE_THUMBNAIL_SUFFIX = "_thumbnail.jpg";
+    public static final String REDIS_KEY_UPLOADING_FILE = REDIS_KEY_PREFIX+"uploading:";
+    public static final String REDIS_KEY_SYS_SETTING = REDIS_KEY_PREFIX +"sysSetting:";
 
 }
